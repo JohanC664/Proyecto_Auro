@@ -13,7 +13,7 @@ users = {
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'flaskusuarios'
+app.config['MYSQL_DB'] = 'auro'
 mysql = MySQL(app)
 
 # --------------------------------------------------#
@@ -35,6 +35,27 @@ def mod_registrate():
 @app.route ('/registro_aprendiz.html')
 def registro_aprendiz ():
     return render_template('registro_aprendiz.html')
+
+@app.route ('/add_aprendiz', methods = ['POST'])
+def registro_un_aprendiz ():
+    if request.method == 'POST':
+        num_documento = request.form ['num_documento']
+        nombre_aprendiz = request.form ['nombre_aprendiz']
+        usuario_aprendiz = request.form ['usuario_aprendiz']
+        carrera_aprendiz = request.form ['carrera_aprendiz']
+        telefono_aprendiz = request.form ['telefono_aprendiz']
+        correo_aprendiz = request.form ['correo_aprendiz']
+        contrasena_aprendiz = request.form ['contrasena_aprendiz']
+        
+        
+        cur= mysql.connection.cursor()
+        cur.execute('INSERT INTO aprendices (num_documento, nombre_aprendiz, usuario_aprendiz, carrera_aprendiz, telefono_aprendiz, correo_aprendiz, contrasena_aprendiz) VALUES (%s, %s, %s, %s, %s, %s, %s )',
+                    (num_documento,nombre_aprendiz,usuario_aprendiz,carrera_aprendiz, telefono_aprendiz, correo_aprendiz, contrasena_aprendiz))
+        
+        mysql.connection.commit()
+        
+        return 'received'
+
 
 #----------- Mod aprendiz --------------#
 

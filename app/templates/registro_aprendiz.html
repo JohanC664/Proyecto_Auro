@@ -4,67 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='./estylos_formu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='./estylos_formu_aprendiz.css')}}">
 </head>
 <body>
-    <div class="container">
-        <h1>¡Regístrate como Estudiante!</h1>
-        <form action="file:///C:/Users/Familia%20Rodriguez%20Mo/Documents/Juan/procesar_registro.php" method="post">
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required="">
-            </div>
-            <div class="form-group">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required="">
-            </div>
-            <div class="form-group">
-                <label for="tipo_documento">Tipo de Documento:</label>
-                <select id="tipo_documento" name="tipo_documento" required="">
-                    <option value="">Seleccionar...</option>
-                    <option value="TI">Tarjeta de Identidad</option>
-                    <option value="CC">Cédula de Ciudadanía</option>
-                    <option value="CE">Cédula Extranjera</option>
-                    <option value="OT">Otras</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="num_documento">Número de Documento:</label>
-                <input type="text" id="num_documento" name="num_documento" required="">
-            </div>
-            <div class="form-group">
-                <label for="nivel_estudio">Nivel de Estudio:</label>
-                <input type="radio" id="tecnico" name="nivel_estudio" value="tecnico" required="">
-                <label for="tecnico">Técnico</label>
-                <input type="radio" id="tecnologo" name="nivel_estudio" value="tecnologo" required="">
-                <label for="tecnologo">Tecnólogo</label>
-            </div>
-            <div class="form-group">
-                <label for="carrera">Carrera que está estudiando:</label>
-                <input type="text" id="carrera" name="carrera" required="">
-            </div>
-            <div class="form-group">
-                <label for="fecha_etapa_electiva">Fecha de Etapa Electiva:</label>
-                <input type="date" id="fecha_etapa_electiva" name="fecha_etapa_electiva" required="">
-            </div>
-            <div class="form-group">
-                <label for="fecha_etapa_productiva">Fecha de Etapa Productiva:</label>
-                <input type="date" id="fecha_etapa_productiva" name="fecha_etapa_productiva" required="">
-            </div>
-            <div class="form-group">
-                <label for="centro_formacion">Centro de Formación:</label>
-                <input type="text" id="centro_formacion" name="centro_formacion" required="">
-            </div>
-            <div class="form-group">
-                <label for="ciudad">Ciudad:</label>
-                <input type="text" id="ciudad" name="ciudad" required="">
-            </div>
-            <div class="form-group">
-                <label for="num_telefono">Número de Celular:</label>
-                <input type="text" id="num_telefono" name="num_telefono" required="">
-            </div>
-            <button type="submit">Registrar</button>
-        </form>
+
+<form action="/add_aprendiz" method="POST">
+    <div class= "lado_izquierdo">
+        <h1 id="logo">AURO</h1>
+        <h3>con oro</h3>
+
+        
+        <input type="number" id="num_documento" name="num_documento" placeholder="dijita tu numero de documento" required>
+        <hr class="linea">
+        <input type="text" id="nombre" name="nombre_aprendiz" placeholder="dijita tu nombre completo" required>
+        <hr class="linea">
+        <input type="text" id="usuario" name="usuario_aprendiz" placeholder="dijita tu usuario" required>
+        <hr class="linea">
+        <input type="text" id="carrera" name="carrera_aprendiz" placeholder="dijita tu carrera" required>
+        <hr class="linea">
+        <input type="number" id="telefono" name="telefono_aprendiz" placeholder="dijita tu telefono" required>
+        <hr class="linea">
+        <input type="text" id="correo" name="correo_aprendiz" placeholder="dijita tu gmail" required>
+        <hr class="linea">
+        <input type="password" id="contrasena" name="contrasena_aprendiz" placeholder="dijita tu contrasena" required>
+        <hr class="linea">
+        <button>Registrarse</button>
+    </div>  
+</form>
+
+
+
+
+
+    <div class = "lado_derecho">
+        <h1 id = "aprendiz">Aprendiz</h1>
+        <img src="static/img/aprendiz.png" alt="">
     </div>
 </body>
 </html>

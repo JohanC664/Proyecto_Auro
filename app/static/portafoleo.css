@@ -13,170 +13,182 @@ html{
     margin: auto;
 }
 nav{
-    height: 100px;
-    background-color: rgb(255, 255, 255); 
+    height: 100%;
+    background-color: #000000; 
 }
 nav ul{
     list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15%;
 }
 nav a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 25px;
 }
 nav ul li{
-    float: left;
-    padding: 40px;
+    padding: 20px;
     
 }
+
+
+main { 
+    width: 100%;
+    display: flex;
+
+}
+
+
+
+
+
+
+
 #imagen{
-    height: 300px;
-    border-radius: 30px;
-    position: relative;
-    top: -150px;
-    left: 40px;
+    justify-content: center;
+    width: 60%;
+    height: 20%;
+    margin:10% 20% 10% 20%;
+    border-radius: 30px
 }
 h2{
-    position: relative;
     text-align: center;
-    top: -140px;
     font-size: 30px;
 }
-img{
+#contiene_img_redes{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     height: 30px;
-    position: relative;
-    top: -130px;
-    left: 115px;
-    padding: 5px;
+    margin: 20px;
     border-radius: 8px;
     transition: filter 0.3s ease;
+
 }
+
 img:hover{
     filter: grayscale(100);
 }
 #lado_izquierdo{
-    height: 600px;
-    width: 400px;
-    position: relative;
-    top: 250px;
-    left: -660px;
+    height: 100%;
+    width: 25%;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgb(255, 255, 255);
-    float: left;
+    margin: 5% ;
 }
 #centro{
-    height: 300px;
-    width: 300px;
-    position: relative;
-    top: -125px;
-    left: 50px;
+    height: 200px;
+    margin: 20px;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #EEEFEB;
-    float: left;
 }
+/*#contiene_circulos_img_centro {
+
+
+}*/
+
 #imagen2{
-    height: 50px;
+    height: 35px;
     position: relative;
     top: 25px;
     left: 20px;
 }
 #imagen3{
-    height: 50px;
+    height: 35px;
     position: relative;
     top: 25px;
     left: 20px;
 }
 #imagen4{
-    height: 50px;
+    height: 35px;
     position: relative;
     top: 25px;
     left: 20px;
 }
 h3{
     font-weight: normal;
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
     left: 100px;
     top: -25px;
 }
+
+
+
+
+
+
+
 article{
-    width: 1150px;
-    height: 1200px;
-    background-color: rgb(255, 255, 255);
+    width: 75%;
+    height: 100%;
     border-radius: 30px;
-    position: relative;
-    left: 540px;
-    top: 250px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    margin: 5% ;
 }
+
+
 #about{
     font-size: 40px;
-    position: relative;
-    top: -580px;
-    left: 30px;
+    margin: 30px;
+}
+
+#cuadro{
+    height: 30%;
 }
 #descripcion
 {
-    width: 93%;
+    width: 80%;
     height: 100px;
-    padding: 10px;
+    padding: 0% 0% 0% 30px;
     border-radius: 3px;
     outline: none;
     border: none;
     resize: vertical;
     font-size: 20px;
-    position: relative;
-    top: -560px;
-    left: 30px;
     background-color: rgb(255, 255, 255);
 }
+
+#padre_todas_cajas{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px;
+    
+}
+
+
+#contiene_dos_cajas1 {
+    display: flex;
+    gap: 10%;
+}
+#contiene_dos_cajas2 {
+    display: flex;
+    gap: 10%;
+
+}
+
+
+
+
+
 #skills{
     font-size: 40px;
-    position: relative;
-    top: -550px;
-    left: 30px;
+    margin: 30px;
 }
-#web{
-    height: 300px;
-    width: 500px;
-    position: relative;
-    top: -530px;
-    left: 30px;
-    background-color: #ff82c32f;
-    float: left;
+#web /*caja1*/{
+    margin: 0% 0% 0 5%;
+    height: 15%;
+    width: 40%;
+    background-color: #ff82c35d;
     border-radius: 20px;
 }
-#photo{
-    height: 300px;
-    width: 500px;
-    position: relative;
-    top: -180px;
-    left: -470px;
-    background-color: #5e17eb27;
-    float: left;
-    border-radius: 20px;
-}
-#app{
-    height: 300px;
-    width: 500px;
-    position: relative;
-    top: -830px;
-    left: 600px;
-    background-color:#5e17eb27;
-    float: left;
-    border-radius: 20px;
-}
-#ui{
-    height: 300px;
-    width: 500px;
-    position: relative;
-    top: -480px;
-    left: 100px;
-    background-color: #ff82c32f;
-    float: left;
-    border-radius: 20px;
-}
+
 #skill1{
     width: 60%;
     height: 34px;
@@ -188,9 +200,6 @@ article{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-weight: bold;
-    position: relative;
-    top: 25px;
-    left:  100px;
     background-color: #ff82c300;
 }
 #descrip1{
@@ -203,61 +212,22 @@ article{
     resize: vertical;
     font-size: 20px;
     font-weight: normal;
-    position: relative;
-    top: 25px;
-    left:  100px;
     background-color: #ff82c300;
 }
-#descrip2{
-    width: 75%;
-    height: 200px;
-    padding: 5px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    resize: vertical;
-    font-size: 20px;
-    font-weight: normal;
-    position: relative;
-    top: 25px;
-    left:  100px;
-    background-color: #5e17eb00;
-}
-#descrip3{
-    width: 75%;
-    height: 200px;
-    padding: 5px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    resize: vertical;
-    font-size: 20px;
-    font-weight: normal;
-    position: relative;
-    top: 25px;
-    left:  100px;
-    background-color: #5e17eb00;
-}
-#descrip4{
-    width: 75%;
-    height: 200px;
-    padding: 5px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    resize: vertical;
-    font-size: 20px;
-    font-weight: normal;
-    position: relative;
-    top: 25px;
-    left:  100px;
-    background-color: #ff82c300;
-}
-#codigo{
-    height: 50px;
-    position: relative;
-    top: -180px;
-    left: -370px;
+
+
+
+
+
+
+
+
+#photo /*caja 2*/{
+    margin: 0% 5% 0 0;
+    height: 15%;
+    width: 40%;
+    background-color: #5e17eb49;
+    border-radius: 20px;
 }
 #skill2{
     width: 60%;
@@ -269,10 +239,30 @@ article{
     resize: vertical;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
-    position: relative;
-    top: 25px;
-    left:  100px;
     background-color: #5e17eb00;
+}
+#descrip2{
+    width: 75%;
+    height: 200px;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    resize: vertical;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #5e17eb00;
+}
+
+
+#app /*caja 3*/{
+
+    margin: 0% 0% 0 5%;
+    height: 15%;
+    width: 40%;
+    border-radius: 20px;
+    background-color:#5513d85f;
+
 }
 #skill3{
     width: 60%;
@@ -284,10 +274,30 @@ article{
     resize: vertical;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
-    position: relative;
-    top: 25px;
-    left:  100px;
     background-color: #5e17eb00;   
+}
+
+#descrip3{
+    width: 75%;
+    height: 200px;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    resize: vertical;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #5e17eb00;
+}
+
+
+#ui /*caja 4*/{
+
+    margin: 0% 5% 0 0;
+    height: 15%;
+    width: 40%;
+    border-radius: 20px;
+    background-color: #fc9dce65;
 }
 #skill4{
     width: 60%;
@@ -299,14 +309,29 @@ article{
     resize: vertical;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
-    position: relative;
-    top: 25px;
-    left:  100px;
     background-color: #ff82c300;   
 }
+#descrip4{
+    width: 75%;
+    height: 200px;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    resize: vertical;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #ff82c300;
+}
+
+
+#codigo{
+    height: 50px;
+}
+
+
+
 footer{
-    height: 300px;
+    height: 100px;
     background-color: #EEEFEB;
-    position: relative;
-    top: 400px;
 }
